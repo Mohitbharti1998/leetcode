@@ -57,6 +57,42 @@ After removing, new nodes become leaf nodes with value (target = 2) (Picture in 
 
 <!-- tabs:start -->
 
+
+Approach
+========
+
+post-order traversal
+
+Complexity
+==========
+
+-   Time complexity: O(n)
+
+-   Space complexity: O(n)
+
+Explanation
+===========
+
+1.  TreeNode Class:
+
+-   Defines the structure of each node in the binary tree, with integer values and left/right child pointers.
+
+2.  Solution Class:
+
+-   Contains the removeLeafNodes method which initiates the process of removing target leaf nodes.
+
+3.  removeLeafNodes Method:
+
+-   Calls the recursive removeLeaves method on the root node to handle the removal of leaf nodes.
+
+4.  removeLeaves Method:
+
+-   A private recursive method that:
+    -   Traverses the tree in a post-order manner (left and right children before the parent).
+    -   Checks if the current node's children are null (i.e., it's a leaf) and its value matches the target.
+    -   If both conditions are met, it returns null to remove the node.\
+        Otherwise, it returns the node itself.
+
 #### Java
 
 ```java
